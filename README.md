@@ -58,7 +58,7 @@ Tab Content would appear in separate rows.
 
 The __tabChange()__ event will emit the index on Tab Switch
 
-| The TabStrip is a FlexboxLayout so all related styles can be applied
+> The TabStrip is a FlexboxLayout so all related styles can be applied
 
 # Examples
 
