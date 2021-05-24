@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "lib": {
+    "entryFile": "src/public_api.ts",
+     "umdModuleIds": {
+      "@ngrx/component-store": "@ngrx/component-store",
+      "tns-core-modules/platform": "tns-core-modules/platform",
+      "tns-core-modules/ui": "tns-core-modules/ui",
+      "tns-core-modules/ui/enums": "tns-core-modules/ui/enums",
+      "tns-core-modules/ui/gestures": "tns-core-modules/ui/gestures",
+      "nativescript-angular/common": "nativescript-angular/common",
+      "nativescript-angular/element-registry": "nativescript-angular/element-registry"
+    }
+  },
+  "dest": "../dist/"
+}

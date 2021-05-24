@@ -1,0 +1,48 @@
+<ng-container *ngIf="tabStripOverlay && isReady">
+  <ng-container *ngTemplateOutlet="gridOutlet"></ng-container>
+</ng-container>
+
+<ng-container *ngIf="!tabStripOverlay && isReady">
+  <ng-container *ngTemplateOutlet="dockOutlet"></ng-container>
+</ng-container>
+
+<ng-template #tabStripOutlet>
+  <ng-content select="TabStrip"></ng-content>
+</ng-template>
+
+<ng-template #tabGroupOutlet>
+  <ng-content select="TabGroup"></ng-content>
+</ng-template>
+
+<ng-template #dockOutlet>
+  <DockLayout>
+    <StackLayout [dock]="tabStripPosition">
+      <ng-container *ngTemplateOutlet="tabStripOutlet"></ng-container>
+    </StackLayout>
+    <StackLayout dock="bottom">
+      <ng-container *ngTemplateOutlet="tabGroupOutlet"></ng-container>
+    </StackLayout>
+  </DockLayout>
+</ng-template>
+
+<ng-template #gridOutlet>
+  <GridLayout>
+    <StackLayout>
+      <ng-container *ngTemplateOutlet="tabGroupOutlet"></ng-container>
+    </StackLayout>
+    <StackLayout [verticalAlignment]="vAlign" [horizontalAlignment]="hAlign">
+      <ng-container *ngTemplateOutlet="tabStripOutlet"></ng-container>
+    </StackLayout>
+  </GridLayout>
+</ng-template>
+
+<!-- <ng-container *ngIf="overlay"> -->
+<!--   <GridLayout borderWidth="2" borderColor="#BEE"> -->
+<!--     <StackLayout> -->
+<!--       <ng-content select="TabStrip"></ng-content> -->
+<!--     </StackLayout> -->
+<!--     <StackLayout> -->
+<!--       <ng-content select="TabContainer"></ng-content> -->
+<!--     </StackLayout> -->
+<!--   </GridLayout> -->
+<!-- </ng-container> -->

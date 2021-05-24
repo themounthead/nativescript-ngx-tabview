@@ -1,6 +1,31 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<StackLayout>
-  <Label text="Tap the button"></Label>
-  <Button text="TAP" (tap)="onTap()"></Button>
-  <Label [text]="getMessage()" textWrap="true"></Label>
-</StackLayout>
+<ActionBar height="0"></ActionBar>
+<TabView marginTop="30" verticalAlignment="top" height="500" (tabChange)="watchTabChange($event)">
+  <TabStrip position="bottom" backgroundColor="#CEE" margin="14" justifyContent="space-between">
+    <TabLabel margin="8">
+      <StackLayout><Label text="Tab1"></Label></StackLayout>
+    </TabLabel>
+    <TabLabel margin="8">
+      <StackLayout><Label text="Tab2"></Label></StackLayout>
+    </TabLabel>
+    <TabLabel margin="8">
+      <StackLayout><Label text="Tab3"></Label></StackLayout>
+    </TabLabel>
+  </TabStrip>
+  <TabGroup backgroundColor="#EFF" height="100%">
+    <Tab>
+      <GridLayout backgroundColor="#EEE" verticalAlignment="center" horizontalAlignment="center">
+        <Label text="Tab Content 1" padding="10"></Label>
+      </GridLayout>
+    </Tab>
+    <Tab>
+      <GridLayout backgroundColor="#EEE" verticalAlignment="center" horizontalAlignment="center">
+        <Label text="Tab Content 2" padding="10"></Label>
+      </GridLayout>
+    </Tab>
+    <Tab>
+      <GridLayout backgroundColor="#EEE" verticalAlignment="center" horizontalAlignment="center">
+        <Label text="Tab Content 3" padding="10"></Label>
+      </GridLayout>
+    </Tab>
+  </TabGroup>
+</TabView>

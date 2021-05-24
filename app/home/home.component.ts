@@ -17,7 +17,7 @@ export class HomeComponent {
       'Hoorraaay! You unlocked the NativeScript clicker achievement!';
   }
 
-  public onTap() {
-    this.counter--;
+  public watchTabChange(index) {
+    // console.log(index);
   }
 }
