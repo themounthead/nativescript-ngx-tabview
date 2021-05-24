@@ -25,11 +25,11 @@ const DIRECTIVES = [
   TabComponentDirective,
 ];
 
-registerElement('TabView', () => LayoutBase);
+registerElement('TabView', () => StackLayout);
 registerElement('TabStrip', () => FlexboxLayout);
-registerElement('TabLabel', () => LayoutBase);
-registerElement('TabGroup', () => LayoutBase);
-registerElement('Tab', () => LayoutBase);
+registerElement('TabLabel', () => StackLayout);
+registerElement('TabGroup', () => StackLayout);
+registerElement('Tab', () => StackLayout);
 
 @NgModule({
   imports: [
